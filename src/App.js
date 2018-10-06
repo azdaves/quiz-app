@@ -17,7 +17,7 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+            WUSD Quiz APP
           </a>
         </header>
       </div>
