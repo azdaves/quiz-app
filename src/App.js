@@ -4,6 +4,7 @@ import './App.css';
 function ActiveQuestions (props) {
   return (
     <div>
+    <header>
       <h2>Fourth Amendment Protection</h2>
       <ul>
         {props.list.map((question) => (
@@ -14,13 +15,15 @@ function ActiveQuestions (props) {
           </li>
         ))}
       </ul>
+      </header>
     </div>
   )
 }
 function InactiveQuestions (props) {
   return (
     <div>
-      <h2>Not Protected (does not apply)</h2>
+    
+      <h2>Not Protected</h2>
       <ul>
         {props.list.map((question) => (
           <li key={question.name}>
@@ -29,6 +32,7 @@ function InactiveQuestions (props) {
           </li>
         ))}
       </ul>
+     
     </div>
   )
 }
@@ -57,6 +61,8 @@ class App extends React.Component {
       input: '',
       
     }
+
+    // getTotalQuestions = () => this.state.questions.length;
     console.log('--constructor--')
 
     this.handleRemoveQuestion = this.handleRemoveQuestion.bind(this)

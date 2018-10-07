@@ -10,7 +10,7 @@
 body {
   font-family: 'Lato', sans-serif;
   color: #4c4c4c;
-  background: #f8fdf3;
+  background: rgb(182, 160, 182);
 }
 
 .App {
@@ -39,6 +39,7 @@ h1 {
 }
 
 h2 {
+  color: black;
   margin-top: 0;
   margin-bottom: 0.35em;
 }
