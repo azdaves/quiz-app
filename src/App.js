@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+var PropTypes = require('prop-types');
+
 
 function ActiveQuestions (props) {
   return (
@@ -22,7 +24,7 @@ function ActiveQuestions (props) {
 function InactiveQuestions (props) {
   return (
     <div>
-    
+      <header>
       <h2>Not Protected</h2>
       <ul>
         {props.list.map((question) => (
@@ -32,10 +34,14 @@ function InactiveQuestions (props) {
           </li>
         ))}
       </ul>
+      </header>
      
     </div>
   )
 }
+
+
+
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -59,6 +65,7 @@ class App extends React.Component {
         },
       ],
       input: '',
+    
       
     }
 
@@ -117,10 +124,10 @@ class App extends React.Component {
   render() {
     console.log('--render--')
     return (
-      <div>
+      <div className='container'>
         <input
           type='text'
-          placeholder='new question'
+          placeholder='add something here'
           value={this.state.input}
           onChange={this.updateInput}
         />
